@@ -27,4 +27,8 @@
     2. Use `ssh-add` (you will have to add the key again every time you start a new session).
     3. Test the connections.
 
+## 1.4 Write playbook scripts to install the required libraries.
+    1. A playbook that installs `git`, `jenkins`, `httpd / nginx`, and `mysql` on the correct nodes (refer to resources).
+    2. Use Ansible to write your jenkins pipeline and to build it (refer to resources).
+
 # 2 Implementation
