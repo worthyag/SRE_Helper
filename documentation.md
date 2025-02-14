@@ -32,3 +32,4 @@
     2. Use Ansible to write your jenkins pipeline and to build it (refer to resources).
 
 # 2 Implementation
+I have created the 4 virtual machines and can now get started on developing the app.
