@@ -1,6 +1,7 @@
 # Final Project
 
 # Part 1: Creating a Flask API (with a database and AI integration) and deploying using Ansible (with git and jenkins)
+# Part 1: Plan
 ## Steps needed to complete part 1
 ### Creating 4 New Virtual Machines
 1. **`ansible_project`** for `ansible` that will control the other three (`192.168.2.140`)
@@ -26,4 +27,4 @@
     2. Use `ssh-add` (you will have to add the key again every time you start a new session).
     3. Test the connections.
 
-## Applying the steps
+# Part 1: Implementation
