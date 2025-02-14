@@ -1,21 +1,21 @@
 from flask import Flask, render_template
 
 import os
-# Importing the necessary functions from the dotenv library.
-from dotenv import load_dotenv, dotenv_values
+from google import genai
 
-# Loading variables from the .env file.
-load_dotenv()
+# genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 
 app = Flask("SRE Helper")
-
-print(os.getenv("SRE_HELPER_GEMINI_API_KEY"))
 
 
 @app.route("/")
 def index():
-    response = "Lisa"
-    return render_template("index.html", res=response)
+    client = genai.Client(api_key=os.environ["SRE_HELPER_GEMINI_API_KEY"])
+    prompt = "Explain how AI works" + "."
+    response = client.models.generate_content(
+        model="gemini-2.0-flash", contents=f"{prompt} Respond in html, ignoring the body and head tags."
+    )
+    return render_template("index.html", res=response.text)
 
 
 app.run(host="0.0.0.0", port=5002)
