@@ -16,3 +16,14 @@
    1. Format the output of the request (etc).
 5. Make sure that it has a good UI.
 6. Push it to GitHub.
+
+### Download ansible onto ansible_project VM and set up PLA.
+1. Download `ansible`.
+    1. Install pip (`yum install pip`)
+    2. Install `ansible` (`yum install ansible`)
+2. Set up PLA to the other VMs (**`jenkins_git_project`**, **`flask_project`**, **`db_project`**).
+    1. Add aliases to the `/etc/hosts`.
+    2. Use `ssh-add` (you will have to add the key again every time you start a new session).
+    3. Test the connections.
+
+## Applying the steps
