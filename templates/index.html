@@ -11,6 +11,26 @@
   </head>
   <body>
     <h1>Welcome to SRE Helper</h1>
-    <div>{{ res }} | safe</div>
+    <!-- <div>{{ res }}</div> -->
+    <div class="menu">
+      <h2>Pick an option</h2>
+      <ol>
+        <li>CPU Load</li>
+        <li>Disk Load</li>
+        <li>Network Load</li>
+        <li>Memory Load</li>
+      </ol>
+    </div>
+    <div class="btns">
+      <form method="post" action="/advice">
+        <select name="prompt-selection" id="prompt-selection">
+          <option value="cpu">CPU Load</option>
+          <option value="disk">Disk Load</option>
+          <option value="network">Network Load</option>
+          <option value="memory">Memory Load</option>
+        </select>
+        <input type="submit" value="generate" />
+      </form>
+    </div>
   </body>
 </html>
