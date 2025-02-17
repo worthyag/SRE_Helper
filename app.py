@@ -59,6 +59,11 @@ def advice():
     return render_template("advice.html", res=cleaned_response)
 
 
+@app.route("/library")
+def viewLibrary():
+    return render_template("library.html")
+
+
 app.run(host="0.0.0.0", port=5002)
 
 #  .lstrip("```html\n")).rstrip("\n```"))
