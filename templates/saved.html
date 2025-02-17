@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SRE Library | Added Book</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Book added successfully!</h1>
+    <p><span>Name: </span>{{ book_name }}</p>
+    <p><span>Author: </span>{{ book_author }}</p>
+    <p><span>Description: </span>{{ book_desc }}</p>
+    <a href="/library"><button>View all Books</button></a>
+    <a href="/"><button>Go back to help page</button></a>
+  </body>
+</html>

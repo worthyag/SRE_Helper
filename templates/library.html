@@ -11,6 +11,26 @@
   </head>
   <body>
     <h1>Your Library</h1>
+    <a href="/library/add/"><button>Add a new book</button></a>
+    <section class="library">
+      {% for book in books %}
+      <div class="book">
+        <h3>{{ book["book_name"] }}</h3>
+        <p><span>Author: </span>{{ book["book_author"] }}</p>
+        <p><span>Description: </span>{{ book["book_desc"] }}</p>
+        <form method="post" action="/library/view/">
+          <input
+            type="text"
+            value="{{ book['book_id'] }}"
+            name="book-id"
+            id="book-id"
+            hidden
+          />
+          <input type="submit" value="View {{ book['book_name'] }}" />
+        </form>
+      </div>
+      {% endfor %}
+    </section>
     <a href="/"><button>Go back to help page</button></a>
   </body>
 </html>
